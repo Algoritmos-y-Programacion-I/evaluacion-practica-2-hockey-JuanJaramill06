@@ -44,5 +44,60 @@ public class Controller {
         return fixture;
     }
 
+    public Equipo crearEquipo(String nombreEquipo){
+        Equipo newEquipo = new Equipo(nombreEquipo);
+        anadirEquipo(newEquipo);
+        return newEquipo;
+    }
+
+    public void anadirEquipo(Equipo equipo) {
+        if (equipo != null && contadorEquipos < equipos.length) {
+            equipos[contadorEquipos++] = equipo;
+          }
+    } 
+
+    public void anadirJugador(String nombre, int edad, Posicion posicion, int equipoIndex) {
+    if (equipoIndex >= 0 && equipoIndex < equipos.length) {
+        JugadorHockey jugador = new JugadorHockey(nombre, edad, posicion);
+
+        equipos[equipoIndex].agregarJugador(jugador, 0); 
+    }
+}
+
+    public void precargarInformacion(){
+        
+        equipos[0] = new Equipo("Equipo A");
+
+        anadirJugador("Jugador1", 20, Posicion.PORTERO, 0);
+        anadirJugador("Jugador2", 25, Posicion.ALA, 0);
+        anadirJugador("Jugador3", 24, Posicion.CENTRO, 1);
+        anadirJugador("Jugador4", 29, Posicion.DEFENSA, 1);
+        anadirJugador("Jugador5", 27, Posicion.DEFENSA, 2);
+        anadirJugador("Jugador6", 22, Posicion.ALA, 2);
+
+        arbitros[0] = new ArbitroPrincipal("Arbitro Principal 1", 40);
+        arbitros[1] = new ArbitroPrincipal("Arbitro Principal 2", 35);
+        arbitros[2] = new JuezDeLinea("Juez de Linea 1", 30);
+        arbitros[3] = new JuezDeLinea("Juez de Linea 2", 32);
+
+    }
+
+     public void simularJugada() {
+        Random random = new Random();
+        System.out.println("Simulando jugada de gol...");
+
+        int[] jugadores = {1, 10, 9, 3, 7, 9};
+        
+        for (int i = 0; i < 5; i++) {
+            // Simula pase entre jugadores
+            System.out.println("Jugador numero " + jugadores[i] + " se la pasa a Jugador numero " + jugadores[i + 1]);
+
+            // Alterna movimiento de arbitros al azar
+            int arbitroIndex = random.nextInt(CANTIDAD_ARBITROS);
+            System.out.println(arbitros[arbitroIndex].desplazarse());
+        }
+        
+        System.out.println("Jugador numero " + jugadores[5] + " entra el disco en la red. Gol!");
+    }
 
 }

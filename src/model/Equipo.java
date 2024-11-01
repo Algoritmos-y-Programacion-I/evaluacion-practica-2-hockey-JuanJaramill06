@@ -8,6 +8,10 @@ public class Equipo {
 
     private JugadorHockey[] jugadores = new JugadorHockey[CANTIDAD_JUGADORES];
 
+    public Equipo(String nombreEquipo){
+        this.nombreEquipo = nombreEquipo;
+    }
+
     public void agregarJugador(JugadorHockey jugador, int posicion) {
         if (posicion >= 0 && posicion < jugadores.length) {
             jugadores[posicion] = jugador;
@@ -17,4 +21,14 @@ public class Equipo {
     public JugadorHockey[] getJugadores() {
         return jugadores;
     }
+    
+    public String getNombreEquipo() {
+        return nombreEquipo;
+    }
+
+    public void setNombreEquipo(String nombreEquipo) {
+        this.nombreEquipo = nombreEquipo;
+    }
+
+
 }

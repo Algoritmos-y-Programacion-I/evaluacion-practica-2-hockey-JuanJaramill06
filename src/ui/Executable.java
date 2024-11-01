@@ -50,10 +50,10 @@ public class Executable {
 
 						break;
 					case 2:
-
+                        precargarInfo();
 						break;
 					case 3:
-
+                        partido();
 						break;
 					case 4:
 						flag = true;
@@ -83,4 +83,12 @@ public class Executable {
 
     }
 
+    private void precargarInfo(){
+        controladora.precargarInformacion();
+        System.out.print("Se ha precargado la informacion de equipos , arbitros y jugadores");
+    }
+    
+    private void partido(){
+        controladora.simularJugada();
+    }
 }
