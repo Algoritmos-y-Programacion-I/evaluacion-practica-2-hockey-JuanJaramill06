@@ -66,19 +66,22 @@ public class Controller {
 
     public void precargarInformacion(){
         
-        equipos[0] = new Equipo("Equipo A");
+    equipos[0] = new Equipo("Equipo A");
+    equipos[1] = new Equipo("Equipo B");
+    equipos[2] = new Equipo("Equipo C");
+    equipos[3] = new Equipo("Equipo D");
 
-        anadirJugador("Jugador1", 20, Posicion.PORTERO, 0);
-        anadirJugador("Jugador2", 25, Posicion.ALA, 0);
-        anadirJugador("Jugador3", 24, Posicion.CENTRO, 1);
-        anadirJugador("Jugador4", 29, Posicion.DEFENSA, 1);
-        anadirJugador("Jugador5", 27, Posicion.DEFENSA, 2);
-        anadirJugador("Jugador6", 22, Posicion.ALA, 2);
+    anadirJugador("Jugador1", 20, Posicion.PORTERO, 0);
+    anadirJugador("Jugador2", 25, Posicion.ALA, 0);
+    anadirJugador("Jugador3", 24, Posicion.CENTRO, 1);
+    anadirJugador("Jugador4", 29, Posicion.DEFENSA, 1);
+    anadirJugador("Jugador5", 27, Posicion.DEFENSA, 2);
+    anadirJugador("Jugador6", 22, Posicion.ALA, 2);
 
-        arbitros[0] = new ArbitroPrincipal("Arbitro Principal 1", 40);
-        arbitros[1] = new ArbitroPrincipal("Arbitro Principal 2", 35);
-        arbitros[2] = new JuezDeLinea("Juez de Linea 1", 30);
-        arbitros[3] = new JuezDeLinea("Juez de Linea 2", 32);
+    arbitros[0] = new ArbitroPrincipal("Arbitro Principal 1", 40);
+    arbitros[1] = new ArbitroPrincipal("Arbitro Principal 2", 35);
+    arbitros[2] = new JuezDeLinea("Juez de Linea 1", 30);
+    arbitros[3] = new JuezDeLinea("Juez de Linea 2", 32);
 
     }
 
