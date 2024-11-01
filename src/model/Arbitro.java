@@ -7,7 +7,7 @@ public class Arbitro extends Persona implements IDesplazarseEnPistaSinPalo {
 
     @Override
     public String desplazarse() {
-        return nombre + " se desplaza en la pista como árbitro.";
+        return nombre + " se desplaza en la pista como arbitro.";
     }
 
    
