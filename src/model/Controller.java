@@ -89,10 +89,8 @@ public class Controller {
         int[] jugadores = {1, 10, 9, 3, 7, 9};
         
         for (int i = 0; i < 5; i++) {
-            // Simula pase entre jugadores
             System.out.println("Jugador numero " + jugadores[i] + " se la pasa a Jugador numero " + jugadores[i + 1]);
 
-            // Alterna movimiento de arbitros al azar
             int arbitroIndex = random.nextInt(CANTIDAD_ARBITROS);
             System.out.println(arbitros[arbitroIndex].desplazarse());
         }
